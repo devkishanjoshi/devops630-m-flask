@@ -26,7 +26,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                sh "docker run -dit -p 82:8080 devil1211/myapp:v2"
+                sh "docker run -dit -p ${params.port}:8080 devil1211/myapp:v2"
             }
         }
     }
